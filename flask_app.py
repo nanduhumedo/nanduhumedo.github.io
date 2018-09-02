@@ -1,6 +1,8 @@
 from flask import Flask
+import chain_reaction
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-	return 'Hello, World!'
+	chain = chain_reaction.get_chain()
+	return chain
