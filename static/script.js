@@ -1,8 +1,14 @@
 var request = new XMLHttpRequest();
 
-request.open('GET', 'http://www.nfrancque.pythonanywhere.com/get_chain')
 
 document.write('hello world')
-request.onload = function () {
-	document.write(this.response)
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+  document.getElementById("demo").innerHTML =
+  this.responseText;
 }
+};
+xhttp.open("GET", "/get_chain", true);
+xhttp.send();
