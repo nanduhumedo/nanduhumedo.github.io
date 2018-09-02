@@ -1,6 +1,9 @@
 import pickle
 
 import random
+def sort_dict_by_value_len(dict_):
+    return sorted(dict_.items(), key=lambda kv: (len(kv[1]), kv[0]), reverse=True)
+
 
 #Prediction
 with open('chain.pkl', 'rb') as f:
