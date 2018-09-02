@@ -2,6 +2,7 @@ import random
 from string import punctuation
 from nltk.corpus import wordnet as wn
 import json
+import pickle
 def sort_dict_by_value_len(dict_):
     return sorted(dict_.items(), key=lambda kv: (len(kv[1]), kv[0]), reverse=True)
 def strip_punctuation(s):
@@ -69,6 +70,5 @@ for i in range(0, len(file_string)):
         else:
             chain[key].append('.')
 
-with open('chain.txt', 'w') as f:
-    for item in chain:
-        f.write(json.dumps(chain))
+with open('chain.pkl', 'wb') as f:
+    pickle.dump(chain, f, pickle.HIGHEST_PROTOCOL)

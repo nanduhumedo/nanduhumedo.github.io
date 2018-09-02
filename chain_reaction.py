@@ -1,8 +1,10 @@
-
+import pickle
 
 import random
 
 #Prediction
+with open('chain.pkl', 'rb') as f:
+	chain = pickle.load(f)
 print(len(chain.keys()))
 
 # for bad_word in bad_words:
