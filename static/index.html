@@ -11,6 +11,30 @@
 </head>
 
 <body>
+
+	<form id="frm1" action="/action_page.php">
+        Current Guess: <input type="text" name="guess" value=""><br>
+    </form>
+    <button onclick="checkGuess()">Submit Guess</button>
+
+    <div id="demo"></div>
+    <button onclick="toggle_show_correct()">Toggle show correct answers</button><br/><br/><br/>
+    <div id="correct"></div>
+    <div id="score">Score: 0</div><br/><br/><br/>
+    <div id="guessStatus">No Guess yet? </div><br/><br/><br/>
 	<script src="/static/script.js"></script>
+    Okay, so basic instructions.  To start click on a word you would like to guess.  It will reveal a new letter.  You can only guess words with another
+    word started next to them.  After clicking, type a guess into the guess box.  DO NOT HIT ENTER. I don't know why it takes you off the page,
+    but it does.  So just use the mouse please.  It will then either show a popup that says correct, reveal the word, and add your score...or do
+    absolutely nothing to indicate you got it wrong.  Feel free to hit the button to show correct answers.
+    <br/>
+    Words and phrases are randomly taken from phrases seen in Moby Dick at every refresh.  As such some of them are pretty rough and make no sense
+    at all.  I'll fix that sometime, probably.
+    <br/>
+    But that gives opportunity for expansion into the user supplying their own book or a recorded conversation with someone etc. and randomly
+    generating phrases those people would be likely to say, which is neat.
+    <br/>
+    Oh yeah, if nothing comes up just refresh.  Sometimes it can't find a way to make a full puzzle and just kinda gives up.  I can make it try harder
+    if that happens a lot.
 </body>
 </html>
